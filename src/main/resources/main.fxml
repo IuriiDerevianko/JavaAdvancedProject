@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.itea.ijavaadv.Controller">
+  <tabs>
+    <Tab text="Фізична особа підприємець">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="640.0">
+               <children>
+                  <TextField fx:id="textFieldFopStatus" layoutX="260.0" layoutY="130.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldFopActivity" layoutX="260.0" layoutY="95.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldFopName" layoutX="260.0" layoutY="25.0" prefHeight="25.0" prefWidth="614.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="95.0" prefHeight="25.0" prefWidth="220.0" text="Основний вид діяльності">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonFopSearch" defaultButton="true" layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#searchFop" prefHeight="25.0" prefWidth="125.0" text="Пошук" AnchorPane.leftAnchor="25.0" />
+                  <Button fx:id="buttonFopStop" cancelButton="true" layoutX="163.0" layoutY="182.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Відміна" AnchorPane.leftAnchor="163.0" />
+                  <ProgressBar fx:id="progressBarFopSearch" layoutX="300.0" layoutY="185.0" prefHeight="20.0" prefWidth="575.0" progress="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="25.0" />
+                  <ListView fx:id="listViewFop" layoutX="25.0" layoutY="225.0" prefHeight="335.0" prefWidth="850.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="225.0" />
+                  <Label layoutX="25.0" layoutY="571.0" text="Знайдено:" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="25.0" />
+                  <Label layoutX="248.0" layoutY="571.0" text="Всього:" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="248.0" />
+                  <TextField fx:id="textFieldFopFound" alignment="CENTER_RIGHT" editable="false" layoutX="105.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="105.0" />
+                  <TextField fx:id="textFieldFopAll" alignment="CENTER_RIGHT" editable="false" layoutX="307.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="307.0" />
+                  <Label layoutX="680.0" layoutY="571.0" text="Час пошуку:" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="135.0" />
+                  <TextField fx:id="textFieldFopTimeSearch" alignment="CENTER_RIGHT" editable="false" layoutX="775.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="25.0" prefHeight="25.0" prefWidth="220.0" text="ПІБ">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="60.0" prefHeight="25.0" prefWidth="220.0" text="Місце проживання">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="130.0" prefHeight="25.0" prefWidth="220.0" text="Стан">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldFopAddress" layoutX="260.0" layoutY="60.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Юридична особа">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="textFieldUoCode" layoutX="260.0" layoutY="95.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="25.0" prefHeight="25.0" prefWidth="220.0" text="Найменування" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttonSearchUo" defaultButton="true" layoutX="25.0" layoutY="279.0" mnemonicParsing="false" onAction="#searchUo" prefHeight="25.0" prefWidth="125.0" text="Пошук" AnchorPane.leftAnchor="25.0" />
+                  <Button fx:id="buttonStopUo" layoutX="163.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Відміна" AnchorPane.leftAnchor="163.0" />
+                  <ProgressBar layoutX="300.0" layoutY="282.0" prefHeight="20.0" prefWidth="575.0" progress="0.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="25.0" />
+                  <ListView fx:id="listViewUo" layoutX="25.0" layoutY="329.0" prefHeight="231.0" prefWidth="850.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="329.0" />
+                  <Label layoutX="25.0" layoutY="571.0" text="Знайдено:" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="25.0" />
+                  <TextField fx:id="textFieldUoFound" alignment="CENTER_RIGHT" editable="false" layoutX="105.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="105.0" />
+                  <Label layoutX="248.0" layoutY="571.0" text="Всього:" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="248.0" />
+                  <TextField fx:id="textFieldUoAll" alignment="CENTER_RIGHT" editable="false" layoutX="307.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="307.0" />
+                  <Label layoutX="680.0" layoutY="571.0" text="Час пошуку:" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="135.0" />
+                  <TextField fx:id="textFieldUoTimeSearch" alignment="CENTER_RIGHT" editable="false" layoutX="775.0" layoutY="566.0" prefHeight="25.0" prefWidth="100.0" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="25.0" />
+                  <Label layoutX="25.0" layoutY="60.0" prefHeight="25.0" prefWidth="220.0" text="Скорочена назва" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="95.0" prefHeight="25.0" prefWidth="220.0" text="Код ЄДРПОУ" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="130.0" prefHeight="25.0" prefWidth="220.0" text="Місцезнаходження" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="165.0" prefHeight="25.0" prefWidth="220.0" text="ПІБ керівника" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="200.0" prefHeight="25.0" prefWidth="220.0" text="Основний вид діяльності" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="25.0" layoutY="235.0" prefHeight="25.0" prefWidth="220.0" text="Стан" AnchorPane.leftAnchor="25.0">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldUoFullName" cache="true" layoutX="260.0" layoutY="25.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldUoShortName" layoutX="260.0" layoutY="60.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldUoAddress" layoutX="260.0" layoutY="130.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldUoChiefName" layoutX="260.0" layoutY="165.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldUoActivity" layoutX="260.0" layoutY="200.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="textFieldUoStatus" layoutX="260.0" layoutY="235.0" prefHeight="25.0" prefWidth="615.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="25.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Про програму">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="256.0" prefWidth="458.0">
+               <children>
+                  <Hyperlink layoutX="270.0" layoutY="180.0" prefHeight="25.0" prefWidth="500.0" text="https://usr.minjust.gov.ua/ua/freesearch" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="180.0" />
+                  <Label layoutX="30.0" layoutY="30.0" text="usr-desktop.&#10;Unified State Register desktop application.&#10;&#10;Єдиний державний реєстр юридичних осіб, &#10;фізичних осіб – підприємців та громадських формувань України.&#10;&#10;Додаток  usr-desktop було розроблено з метою навчання." AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+                  <Label layoutX="30.0" layoutY="180.0" prefHeight="25.0" prefWidth="220.0" text="Аналог Web-додатку:&#10;" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="180.0" />
+                  <Label layoutX="30.0" layoutY="220.0" prefHeight="25.0" prefWidth="220.0" text="Паспорт набора данних:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="220.0" />
+                  <Hyperlink layoutX="270.0" layoutY="220.0" prefHeight="25.0" prefWidth="500.0" text="http://data.gov.ua/passport/73cfe78e-89ef-4f06-b3ab-eb5f16aea237" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="220.0" />
+                  <Label layoutX="30.0" layoutY="339.0" prefHeight="25.0" prefWidth="220.0" text="Розробники:" AnchorPane.bottomAnchor="243.0" AnchorPane.leftAnchor="30.0" />
+                  <Label layoutX="30.0" layoutY="369.0" prefHeight="25.0" prefWidth="220.0" text="Дерев’янко Юрій" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="30.0" />
+                  <Label layoutX="270.0" layoutY="369.0" prefHeight="25.0" prefWidth="300.0" text=" iurii.derevianko@gmail.com" AnchorPane.bottomAnchor="213.0" AnchorPane.leftAnchor="270.0" />
+                  <Label layoutX="30.0" layoutY="407.0" prefHeight="25.0" prefWidth="220.0" text="Гончаров Дмитро" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="30.0" />
+                  <Label layoutX="270.0" layoutY="407.0" prefHeight="25.0" prefWidth="300.0" text=" blacksunempire777@gmail.com" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="270.0" />
+                  <Label layoutX="30.0" layoutY="495.0" prefHeight="25.0" prefWidth="220.0" text="Сульженко Олександр" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="30.0" />
+                  <Label layoutX="270.0" layoutY="495.0" prefHeight="25.0" prefWidth="300.0" text=" iexcept@gmail.com" AnchorPane.bottomAnchor="87.0" AnchorPane.leftAnchor="270.0" />
+                  <Label layoutX="30.0" layoutY="552.0" prefHeight="25.0" prefWidth="220.0" text="Учбовий заклад:" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" />
+                  <Hyperlink layoutX="270.0" layoutY="552.0" prefHeight="25.0" prefWidth="300.0" text="www.itea.ua" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="270.0" />
+                  <Label layoutX="30.0" layoutY="465.0" prefHeight="25.0" prefWidth="220.0" text="Керівник:" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="30.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
