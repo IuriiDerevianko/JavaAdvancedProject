@@ -137,9 +137,9 @@ public class Controller {
                 textFieldFopActivity.getText(), textFieldFopStatus.getText());
 
         //xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/fopTest.xml");
-        xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
-        xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
-        xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
+        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
+        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
+        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
 
 
         ObservableList<Fop> fopList = FXCollections.observableList(fopXmlParser.getFopList());
@@ -172,7 +172,7 @@ public class Controller {
                 textFieldUoActivity.getText(), textFieldUoStatus.getText());
 
         //xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/uoTest.xml");
-        xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
+        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
 
 
         ObservableList<Uo> uoList = FXCollections.observableList(uoXmlParser.getUoList());
