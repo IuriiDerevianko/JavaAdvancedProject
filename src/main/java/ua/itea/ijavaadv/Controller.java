@@ -176,6 +176,7 @@ public class Controller {
                 textFieldUoActivity.getText(), textFieldUoStatus.getText());
 
 
+
         final String UO_TEST_FILE = "uoTest.xml";
         URL uoUrl = getClass().getClassLoader().getResource(UO_TEST_FILE);
         xmlReader.parse(String.valueOf(uoUrl));
