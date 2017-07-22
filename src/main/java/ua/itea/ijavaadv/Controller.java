@@ -11,7 +11,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
-
+import java.net.URL;
 
 
 /**
@@ -137,10 +137,13 @@ public class Controller {
         fopXmlParser.searchData(textFieldFopName.getText(), textFieldFopAddress.getText(),
                 textFieldFopActivity.getText(), textFieldFopStatus.getText());
 
+        final String FOP_TEST_FILE = "fopTest.xml";
+        URL fopUrl = getClass().getClassLoader().getResource(FOP_TEST_FILE);
+        xmlReader.parse(String.valueOf(fopUrl));
         //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/fopTest.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
 
 
         ObservableList<Fop> fopList = FXCollections.observableList(fopXmlParser.getFopList());
@@ -172,8 +175,12 @@ public class Controller {
                 textFieldUoCode.getText(), textFieldUoAddress.getText(), textFieldUoChiefName.getText(),
                 textFieldUoActivity.getText(), textFieldUoStatus.getText());
 
+
+        final String UO_TEST_FILE = "uoTest.xml";
+        URL uoUrl = getClass().getClassLoader().getResource(UO_TEST_FILE);
+        xmlReader.parse(String.valueOf(uoUrl));
         //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/uoTest.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
 
 
         ObservableList<Uo> uoList = FXCollections.observableList(uoXmlParser.getUoList());
