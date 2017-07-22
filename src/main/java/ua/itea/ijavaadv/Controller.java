@@ -13,6 +13,7 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 
 
+
 /**
  * Created
  * at 0:29
@@ -136,10 +137,10 @@ public class Controller {
         fopXmlParser.searchData(textFieldFopName.getText(), textFieldFopAddress.getText(),
                 textFieldFopActivity.getText(), textFieldFopStatus.getText());
 
-        //xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/fopTest.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
+        xmlReader.parse("https://drive.google.com/open?id=0B_XfuF--715SUURyc3BwWGNOb3M");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_1.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_2.xml");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/FOP_3.xml");
 
 
         ObservableList<Fop> fopList = FXCollections.observableList(fopXmlParser.getFopList());
@@ -171,8 +172,8 @@ public class Controller {
                 textFieldUoCode.getText(), textFieldUoAddress.getText(), textFieldUoChiefName.getText(),
                 textFieldUoActivity.getText(), textFieldUoStatus.getText());
 
-        //xmlReader.parse("/media/derevianko/3C4EAFE44EAF94E4/ITEA/Java_advanced_project/src/main/resources/uoTest.xml");
-        xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
+        xmlReader.parse("https://drive.google.com/open?id=0B_XfuF--715Sek5SckJheDYyYmM");
+        //xmlReader.parse("/media/iurii/3C4EAFE44EAF94E4/ITEA/Java_advanced_project_xml/15-UFOP/UO.xml");
 
 
         ObservableList<Uo> uoList = FXCollections.observableList(uoXmlParser.getUoList());
